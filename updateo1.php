@@ -9,7 +9,7 @@
     <?php
     $ido = $_GET['ido'];
     include("connexion.php");
-    $rq ="SELECT ido, nomo, prenomo, nummachine, numarticle, nbH, sparheure, stravail FROM ouvrier WHERE ido=:ido";
+    $rq ="SELECT 'ido', 'nomo', 'prenomo', 'nummachine', 'numarticle', 'nbH', 'sparheure', 'stravail' FROM 'ouvrier' WHERE $ido=:ido";
 $stm=$connexion->prepare($rq);
 $parms=array('ido'=>$_GET['ido']);
 $stm->execute($parms);
@@ -18,7 +18,7 @@ $ouvrier = $tab[0];
 
     ?>
 <form action="updateo2.php" method="post">
-    <input type="hidden" name="ido" value="<?=$ouvrier['ido'];?>" />
+    <input type="text" name="ido" value="<?=$ouvrier['ido'];?>" />
     nom	<input value="<?=$ouvrier['nomo'];?>" type="text" name="nomo" /><br />
     prenom <input value="<?=$ouvrier['prenomo'];?>" type="text" name="prenomo" /><br />
     numero machine <input value="<?=$ouvrier['nummachine'];?>" type="text" name="nummachine" /><br />
