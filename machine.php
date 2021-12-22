@@ -45,8 +45,8 @@ $_POST["cout"],$_POST["fonctionnement"],$_POST["ido"],))
             <td>" . $M["cout"]." </td>
             <td> ". $M["fonctionnement"] ." </td>
             <td>". $M["ido"] ." </td>
-            <td><a href='update1.php?ido=$nummachine'>modifier</a> </td>
-            <td><a href='deleteo.php?ido=$nummachine'>supprimer</a> </td>
+            <td><a href='update1.php?nummachine=$nummachine'>modifier</a> </td>
+            <td><a href='deleteo.php?nummachine=$nummachine'>supprimer</a> </td>
         </tr>" ;
     ?>
    
